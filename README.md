@@ -44,6 +44,10 @@ FROM employees;
 Note que neste caso o conteúdo também é copiado, no entanto pode filtrar de acordo que as condições que introduzir na cláusula SELECT.
 
 ## 1. Views
+diagrama ER (fisico); 
+Relações; 
+CONSTRAINTS referenciais: FK
+
 Vistas ou views em SQL são uma espécie de tabelas virtuais construídas a partir do resultado de uma execução de uma outra query. Podem ser vistas como o resultado de um SELECT ao qual foi dado atribuido um nome. Assim as vistas mantêm a estrutura de linhas/colunas e podem ser acedidas tal como uma tabela no entanto não são armazenadas de forma persistente pelo que não ocupam espaço adicional no disco. Cada vez que há um acesso a uma vista a query que lhe deu origem é recalculada.
 
 A sintaxe para criarmos uma vista é semelhante a criar uma tabela com base numa query:
