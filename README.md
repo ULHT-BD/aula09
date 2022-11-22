@@ -60,6 +60,7 @@ ALTER TABLE tabela DROP CONSTRAINT;
 
 ### Exercícios
 Escreva o código SQL que permite:
+0. Crie a Base de Dados BD_Empresa
 1. Construir uma base de dados de acordo com o diagrama seguinte, onde um empregado trabalha num departamento e num departamento podem trabalhar vários empregados:
 <img width="747" alt="image" src="https://user-images.githubusercontent.com/32137262/203181180-9e39a698-902c-4198-ab1f-04cb5ad9cb1f.png">
 
