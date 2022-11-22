@@ -6,13 +6,11 @@ Bom trabalho!
 
 [1. Integridade Referencial](#1-integridade-referencial)
 
-[2. One-to-Many](#2-one-to-many)
+[2. Actions](#2-actions)
 
-[3. Many-to-Many](#3-many-to-many)
+[3. Trabalho de Casa](#3-trabalho-de-casa)
 
-[4. Trabalho de Casa](#4-trabalho-de-casa)
-
-[5. Resoluções](#5-resoluções)
+[4. Resoluções](#4-resoluções)
 
 [Bibliografia e Referências](#bibliografia-e-referências)
 
@@ -61,32 +59,63 @@ ALTER TABLE tabela DROP CONSTRAINT;
 ```
 
 ### Exercícios
-Para cada uma das alíneas seguintes, escreva a query que permite obter:
-1. Uma vista para os empregados onde é possivel ter acesso ao id, primeiro nome, último nome e salário (incluindo comissão quando existe)
-2. Atualize a comissão do empregado cujo id é 100 para 25%. Consulte a vista e verifique a alteração do resultado na vista.
-3. Crie uma vista v_job que permite obter os valores mínimo, médio e máximo do salário de cada função (JOB_ID)
-4. Utilize a vista anterior para obter a lista de JOB_ID e salários médios para as funções cujo salário médio é superior a 10000.
+Escreva o código SQL que permite:
+1. Construir uma base de dados de acordo com o diagrama seguinte, onde um empregado trabalha num departamento e num departamento podem trabalhar vários empregados:
+<img width="747" alt="image" src="https://user-images.githubusercontent.com/32137262/203181180-9e39a698-902c-4198-ab1f-04cb5ad9cb1f.png">
 
-## 2. One-to-Many
+2. Insira os tuplos
+- trabalhador Teresa Costeira, CC 12345678, que trabalha no departamento de IT orçamento 150.000€ desde '28-03-2022'
+- trabalhador Pedro Matias, CC 43218765, que trabalha no departamento de RH orçamento 80.000€ desde '10-09-2021'
+- experimente apagar o departamento de IT
+
+3. Construir uma base de dados de acordo com o diagrama seguinte, onde um empregado pode trabalhar em vários departamentos e num departamento podem trabalhar vários empregados:
+<img width="747" alt="image" src="https://user-images.githubusercontent.com/32137262/203181590-ae62094b-e265-4af0-924f-233a0290aecb.png">
+
+4. Insira os tuplos
+- trabalhadora Teresa Costeira, CC 12345678, que trabalha no departamento de IT orçamento 150.000€ desde '28-03-2022'
+- trabalhador Pedro Matias, CC 43218765, que trabalha no departamento de RH orçamento 80.000€ desde '10-09-2021'
+- trabalhadora Luisa Macedo, CC 12344321, que trabalha no departamento de RH orçamento 80.000€ desde '12-11-2021'
+- experimente apagar o departamento de IT
+
+
+## 2. Actions
+Podemos definir ações de forma programática quando ocorrem alterações às referências. A ação por defeito é ```RESTRICT``` provocando um erro ao tentar remover ou alterar uma chave estrangeira. Podemos definir ações para a ocorrência de eventos sobre uma chave estrangeira, quando alterado (```ON UPDATE```) ou quando é removido (```ON DELETE```).
+
+O comportamento por defeito e restringir ```RESTRICT``` dar erro. Outras alternativas sao 
+- ```CASCADE``` - efeito em cascata se tuplo referencia (ou master) for removido/alterado os tuplos referenciados serão removidos/alterados
+- ```SET NULL``` - se tuplo referencia (ou master) for removido/alterado o atributo FK nos tuplos referenciados serão atualizados para valor ```NULL```
+- ```NO ACTION``` - nenhuma acao
+- ```SET DEFAULT``` -  se tuplo referencia (ou master) for removido/alterado o atributo FK nos tuplos referenciados serão atualizados para valor definido como default
+
+Exemplo de uma definicao de chave estrangeira com definicao de uma acao:
+
+``` sql
+CREATE TABLE tabela (
+  definicao-de-colunas,
+  CONSTRAINT fk_tabela_tabelaref FOREIGN KEY (coluna) REFERENCES tabela-referencia(coluna) 
+    ON UPDATE DELETE CASCADE
+);
+```
+
+Ou se alterarmos uma tabela existente adicionando restrições de integridade e com acoes diferentes para alteracao e remocao:
+
+``` sql
+ALTER TABLE tabela
+ADD CONSTRAINT fk_tabela_tabelaref FOREIGN KEY (coluna) REFERENCES tabela-referencia(coluna) 
+  ON DELETE CASCADE 
+  ON UPDATE SET NULL
+);
+```
 
 
 ### Exercícios
-Para cada uma das alíneas seguintes, escreva a query que permite obter:
-1. Quais os índices da tabela employees e os vários atributos (tipo de índice, sequência, etc)
-2. Adicione um índice para o telefone de empregados e volte a verificar os índices existentes
-3. Remova o índice que adicionou no ponto anterior
-
-## 3. Many-to-Many
+Altere a base de dados que criou no exercício anterior para o seguinte:
+1. Altere a BD do exercício 1.1 tal que quando um departamento é removido, todos os empregados desse departamento são removidos e para que quando o departamente é alterado perde referência para o valor null
+2. Experimente remover o departamento IT e alterar o departamento RH
+3. Altere a BD em 1.3 tal que quando um departamento é removido, os seus empregados passam a pertencer ao departamento de RH.
 
 
-### Exercícios
-Para cada uma das alíneas seguintes, escreva a query que permite obter:
-1. Quais os índices da tabela employees e os vários atributos (tipo de índice, sequência, etc)
-2. Adicione um índice para o telefone de empregados e volte a verificar os índices existentes
-3. Remova o índice que adicionou no ponto anterior
-
-
-## 4. Trabalho de Casa
+## 3. Trabalho de Casa
 (a publicar)
 
 
