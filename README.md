@@ -112,7 +112,7 @@ ADD CONSTRAINT fk_tabela_tabelaref FOREIGN KEY (coluna) REFERENCES tabela-refere
 Altere a base de dados que criou no exercício anterior para o seguinte:
 1. Altere a BD do exercício 1.1 tal que quando um departamento é removido, todos os empregados desse departamento são removidos e para que quando o departamente é alterado perde referência para o valor null
 2. Experimente remover o departamento IT e alterar o departamento RH
-3. Altere a BD em 1.3 tal que quando um departamento é removido, os seus empregados passam a pertencer ao departamento de RH.
+3. Altere a BD em 1.3 tal que quando um departamento é removido, os seus empregados deixam de pertencer a qualquer departamento.
 
 
 ## 3. Trabalho de Casa
