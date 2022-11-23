@@ -117,10 +117,28 @@ Altere a base de dados que criou no exercício anterior para o seguinte:
 
 
 ## 3. Trabalho de Casa
-(a publicar)
+*Notas:*
+
+1. Caso não tenha consegui criar a base de dados deisiflix nos trabalhos anteriores experimente verifique ou altere o nome de utilizador da sua ligação à ao MariaDB para ```root``` (a password deve ser ```admin```)
+![image](https://user-images.githubusercontent.com/32137262/202258030-d9e452f7-4cde-4aa3-b42f-a403d59e80cc.png)
+
+2. No [trabalho de casa da aula anterior](https://github.com/ULHT-BD/aula08/blob/main/README.md#3-trabalho-de-casa) foi pedida a criação e carregamento de dados dos ficheiros nas relações criadas, possivel via comando ```LOAD``` ou interface dbeaver (caso não tenha conseguido resolver, consulte a [resolução](https://github.com/ULHT-BD/aula08/blob/main/README.md#4-resolu%C3%A7%C3%B5es)). Para quem usou o dbeaver, duas ajudas:
+
+* o load assume a primeira linha como nome da coluna pelo que esta não é inserida. Sugestão adicione uma primeira linha com nomes das colunas antes da importação.
+
+* a conversão de dados no load_movies tem dificuldade em converter strings que contenham espaços (e.g. ' 123.0') em números. Sugestão abre o ficheiro e faça find and replace de ' ,' ou ', ' por '.'
+
+### Exercício
+Escreva o código SQL que permite criar as relações definidas no modelo 1 do enunciado do projeto, incluindo as respetivas restrições de integridade referencial definidas no esquema físico:
+
+![image](https://user-images.githubusercontent.com/32137262/203655497-726659ae-cc46-42d5-8c7e-9ca84988b8af.png)
 
 
-## 5. Resoluções
+Bom trabalho!
+
+NOTA: submeta a sua resposta ao trabalho de casa no moodle contendo a criação de base de dados, tabelas e índices num script sql. O ficheiro de texto com o nome TPC_a09_[N_ALUNO].sql (exemplo: TPC_a09_12345.sql para o aluno número 12345).
+
+## 4. Resoluções
 [Resolução dos exercícios em aula](https://github.com/ULHT-BD/aula09/blob/main/aula09_resolucao.sql)
 
 [Resolução do trabalho de casa](https://github.com/ULHT-BD/aula09/blob/main/TPC_a09_resolucao.sql)
