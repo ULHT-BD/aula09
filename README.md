@@ -131,8 +131,9 @@ Altere a base de dados que criou no exercício anterior para o seguinte:
 ### Exercício
 Escreva o código SQL que permite criar as relações (movies, movie_genre, genre) definidas no modelo 1 do enunciado do projeto, incluindo as respetivas restrições de integridade referencial definidas no esquema físico:
 
-![image](https://user-images.githubusercontent.com/32137262/203655497-726659ae-cc46-42d5-8c7e-9ca84988b8af.png)
+<img width="685" alt="image" src="https://user-images.githubusercontent.com/32137262/203660157-2dae0678-bcc6-4909-ab28-45aa62b410ec.png">
 
+Extra: se quiser adiantar o seu trabalho de projeto, crie igualmente as restantes relações e restrições.
 
 Bom trabalho!
 
