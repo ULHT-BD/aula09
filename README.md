@@ -120,7 +120,8 @@ Altere a base de dados que criou no exercício anterior para o seguinte:
 *Notas:*
 
 1. Caso não tenha consegui criar a base de dados deisiflix nos trabalhos anteriores experimente verifique ou altere o nome de utilizador da sua ligação à ao MariaDB para ```root``` (a password deve ser ```admin```)
-![image](https://user-images.githubusercontent.com/32137262/202258030-d9e452f7-4cde-4aa3-b42f-a403d59e80cc.png)
+
+<img width="685" alt="image" src="https://user-images.githubusercontent.com/32137262/202258030-d9e452f7-4cde-4aa3-b42f-a403d59e80cc.png">
 
 2. No [trabalho de casa da aula anterior](https://github.com/ULHT-BD/aula08/blob/main/README.md#3-trabalho-de-casa) foi pedida a criação e carregamento de dados dos ficheiros nas relações criadas, possivel via comando ```LOAD``` ou interface dbeaver (caso não tenha conseguido resolver, consulte a [resolução](https://github.com/ULHT-BD/aula08/blob/main/README.md#4-resolu%C3%A7%C3%B5es)). Para quem usou o dbeaver, duas ajudas:
 
