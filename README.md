@@ -129,7 +129,7 @@ Altere a base de dados que criou no exercício anterior para o seguinte:
 * a conversão de dados no load_movies tem dificuldade em converter strings que contenham espaços (e.g. ' 123.0') em números. Sugestão abre o ficheiro e faça find and replace de ' ,' ou ', ' por '.'
 
 ### Exercício
-Escreva o código SQL que permite criar as relações definidas no modelo 1 do enunciado do projeto, incluindo as respetivas restrições de integridade referencial definidas no esquema físico:
+Escreva o código SQL que permite criar as relações (movies, movie_genre, genre) definidas no modelo 1 do enunciado do projeto, incluindo as respetivas restrições de integridade referencial definidas no esquema físico:
 
 ![image](https://user-images.githubusercontent.com/32137262/203655497-726659ae-cc46-42d5-8c7e-9ca84988b8af.png)
 
