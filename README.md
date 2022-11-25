@@ -146,6 +146,7 @@ NOTA: submeta a sua resposta ao trabalho de casa no moodle contendo a criação 
 [Resolução do trabalho de casa](https://github.com/ULHT-BD/aula09/blob/main/TPC_a09_resolucao.sql)
 
 ## Bibliografia e Referências
+* [Slides aula (+material extra)](https://github.com/ULHT-BD/aula09/blob/main/Aula09.pdf) 
 * [mysqltutorial - CREATE TABLE](https://www.mysqltutorial.org/mysql-create-table/)
 * [mysqltutorial - Data Types](https://www.mysqltutorial.org/mysql-data-types.aspx)
 * [MySQL - Data Types](https://dev.mysql.com/doc/refman/8.0/en/data-types.html)
